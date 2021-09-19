@@ -23,4 +23,8 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('admin/home', [HomeController::class, 'AdminHome'])->name('admin.home')->middleware('is_admin');
+Route::middleware(['is_admin'])->group(function () {
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::get('home', [HomeController::class, 'AdminHome'])->name('home');
+    });
+});
