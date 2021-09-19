@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['is_admin'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('home', [HomeController::class, 'AdminHome'])->name('home');
+    });
+
+    Route::prefix('service')->name('service.')->group(function () {
+        Route::get('create', [ServiceController::class, 'createForm']);
+        Route::post('create', [ServiceController::class, 'create'])->name('create');
     });
 });
