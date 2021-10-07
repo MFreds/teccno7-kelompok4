@@ -25,6 +25,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    @yield('styles')
+
 </head>
 <body>
     <div id="app">
@@ -104,7 +106,7 @@
         </nav>
 
         {{-- alert template --}}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+        {{-- <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
             Error message
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -115,7 +117,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div>
+        </div> --}}
 
         <main class="py-4">
             @yield('content')

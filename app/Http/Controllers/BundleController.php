@@ -18,6 +18,14 @@ class BundleController extends Controller
         return view('bundle.create');
     }
 
+    public function showBundle($uuid) {
+
+        $bundle = Bundle::where('uuid', $uuid)->first();
+        $bundle_items = BundleItem::where('bundle_id', $bundle->id)->get();
+
+        return view('bundle.show')->with('bundle', $bundle)->with('bundle_items', $bundle_items);
+    }
+
     public function create(Request $request) {
 
         // daftar bundle dulu
@@ -71,13 +79,15 @@ class BundleController extends Controller
         $item_desc = $request->description_item;
         $item_photos = $request->file('photo_item');
 
+        // dd($item_photos);
+
         foreach($item_name as $index => $item) {
 
             // photo process
             $photo = $item_photos[$index];
             $content = file_get_contents($photo->getRealPath());
             $photo_ext = $photo->getClientOriginalExtension();
-            $file_name = 'bundle-item-' .$user_id . $uuid_str . '.' . $photo_ext;
+            $file_name = 'bundle-item-' .$user_id . (string) Str::uuid() . '.' . $photo_ext;
 
             Storage::put('public/bundle_item_photos/' . $file_name, $content);
 

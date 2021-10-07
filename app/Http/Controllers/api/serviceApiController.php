@@ -14,7 +14,7 @@ class serviceApiController extends Controller
 
         return response()->json([
             'code' => 200,
-            'success'=>'testing successfully',
+            'success'=>true,
             'data' => $data
         ]);
     }

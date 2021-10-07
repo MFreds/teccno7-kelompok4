@@ -18,6 +18,10 @@ use App\Http\Controllers\BundleController;
 |
 */
 
+Route::prefix('test')->group(function () {
+    Route::get('showcase', [ShowcaseController::class, 'testThreeJs']);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,10 +29,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::prefix('test')->group(function () {
-    Route::get('showcase', [ShowcaseController::class, 'testThreeJs']);
-});
 
 Route::middleware(['is_admin'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
@@ -44,4 +44,9 @@ Route::middleware(['is_admin'])->group(function () {
         Route::get('create', [BundleController::class, 'createForm']);
         Route::post('create', [BundleController::class, 'create'])->name('create');
     });
+});
+
+// bundle
+Route::prefix('bundle')->name('bundle.')->group(function () {
+    Route::get('{uuid}', [BundleController::class, 'showBundle'])->name('show');
 });

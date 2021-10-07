@@ -23,3 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix('app/product')->name('api.product.')->group(function () {
     Route::post('/getAllServices', [api\serviceApiController::class, 'getAllServices'])->name('getAllServices');
 });
+
+Route::prefix('app/cart')->name('api.cart.')->group(function () {
+    Route::post('/addItemToCart', [api\cartApiController::class, 'addItemToCart'])->name('addItemToCart');
+});
