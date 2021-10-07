@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ShowcaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::prefix('test')->group(function () {
+    Route::get('showcase', [ShowcaseController::class, 'testThreeJs']);
+});
 
 Route::middleware(['is_admin'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
