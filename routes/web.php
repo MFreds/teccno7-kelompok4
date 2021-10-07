@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ShowcaseController;
+use App\Http\Controllers\BundleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,10 @@ Route::middleware(['is_admin'])->group(function () {
     Route::prefix('service')->name('service.')->group(function () {
         Route::get('create', [ServiceController::class, 'createForm']);
         Route::post('create', [ServiceController::class, 'create'])->name('create');
+    });
+
+    Route::prefix('bundle')->name('bundle.')->group(function () {
+        Route::get('create', [BundleController::class, 'createForm']);
+        Route::post('create', [BundleController::class, 'create'])->name('create');
     });
 });

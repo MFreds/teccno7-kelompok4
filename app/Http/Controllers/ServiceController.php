@@ -14,7 +14,7 @@ class ServiceController extends Controller
 {
 
     public function createForm() {
-        return view('product.create');
+        return view('service.create');
     }
 
     public function create(Request $request) {
@@ -47,7 +47,7 @@ class ServiceController extends Controller
                 'max_revision' =>  $request->max_revision,
                 'status' => 'open',
             ]);
-            
+
             return redirect()->back()->with('success', 'Post created successfully.');
 
 
@@ -65,5 +65,5 @@ class ServiceController extends Controller
         }
     }
 
-    
+
 }
