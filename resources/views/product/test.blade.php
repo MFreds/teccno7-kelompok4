@@ -18,11 +18,11 @@
 	<body>
     <div>
         <input id="file-input" type="file" (change)="mychange($event)" />
-    </div>  
+    </div>
         <canvas id="canvas"></canvas>
 		{{-- <script src="js/three.min.js"></script> --}}
 		<script type="module">
-            import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+            import * as THREE from '/js/three/build/three.module.js';
             import { GLTFLoader } from '/js/three/examples/jsm/loaders/GLTFLoader.js';
             import { OrbitControls } from '/js/three/examples/jsm/controls/OrbitControls.js';
             // import { GLTFLoader } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/loaders/GLTFLoader.js';
@@ -167,7 +167,7 @@
                 }
 
                 requestAnimationFrame(render);
-    
+
         });
 		</script>
 	</body>
