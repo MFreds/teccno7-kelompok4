@@ -44,9 +44,11 @@ Route::middleware(['is_admin'])->group(function () {
         Route::get('create', [BundleController::class, 'createForm']);
         Route::post('create', [BundleController::class, 'create'])->name('create');
     });
+
+
 });
 
 // bundle
 Route::prefix('bundle')->name('bundle.')->group(function () {
-    Route::get('{uuid}', [BundleController::class, 'showBundle'])->name('show');
+    Route::get('details/{uuid}', [BundleController::class, 'showBundle'])->name('show');
 });
