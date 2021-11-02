@@ -35,4 +35,8 @@ class HomeController extends Controller
         return view('admin.bundle-data');
     }
 
+    public function itemData() {
+        return view('admin.item-data-v2');
+        // return view('admin.item-data');
+    }
 }

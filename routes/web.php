@@ -29,11 +29,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 Route::middleware(['is_admin'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('home', [HomeController::class, 'AdminHome'])->name('home');
+        Route::get('item/data', [HomeController::class, 'itemData'])->name('item.data');
         Route::get('bundle/data', [HomeController::class, 'bundleData'])->name('bundle.data');
     });
 
@@ -60,3 +59,14 @@ Route::prefix('bundle')->name('bundle.')->group(function () {
 
     Route::get('list',  [BundleController::class, 'getBundles'])->name('list');
 });
+
+Route::prefix('item')->name('item.')->group(function () {
+    Route::get('list',  [ItemController::class, 'getItems'])->name('list');
+
+    Route::get('list',  [ItemController::class, 'getItemsv2'])->name('listv2');
+    Route::get('{id}/edit',  [ItemController::class, 'edit'])->name('editv2');
+    Route::put('{id}',  [ItemController::class, 'update'])->name('updatev2');
+    Route::post('{id}/delete',  [ItemController::class, 'destroy'])->name('destroyv2');
+});
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
