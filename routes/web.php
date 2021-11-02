@@ -34,6 +34,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['is_admin'])->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('home', [HomeController::class, 'AdminHome'])->name('home');
+        Route::get('bundle/data', [HomeController::class, 'bundleData'])->name('bundle.data');
     });
 
     Route::prefix('service')->name('service.')->group(function () {
@@ -56,4 +57,6 @@ Route::middleware(['is_admin'])->group(function () {
 // bundle
 Route::prefix('bundle')->name('bundle.')->group(function () {
     Route::get('details/{uuid}', [BundleController::class, 'showBundle'])->name('show');
+
+    Route::get('list',  [BundleController::class, 'getBundles'])->name('list');
 });

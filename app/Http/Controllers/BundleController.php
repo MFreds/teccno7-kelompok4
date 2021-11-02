@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use DataTables;
 
 use Illuminate\Http\Request;
 
@@ -117,5 +118,21 @@ class BundleController extends Controller
         return redirect()->back()->with('success', 'Bundle created successfully.');
 
 
+    }
+
+    public function getBundles(Request $request) {
+
+        if ($request->ajax()) {
+            $data = Bundle::latest()->get();
+
+            return Datatables::of($data)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
     }
 }

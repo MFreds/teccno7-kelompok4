@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('admin.home');
     }
+
+    public function bundleData() {
+        return view('admin.bundle-data');
+    }
+
 }
