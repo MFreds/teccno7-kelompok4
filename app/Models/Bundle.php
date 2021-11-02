@@ -17,5 +17,6 @@ class Bundle extends Model
         'price',
         'stock',
         'status',
+        'tags',
     ];
 }
