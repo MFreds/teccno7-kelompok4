@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ShowcaseController;
 use App\Http\Controllers\BundleController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,10 @@ Route::middleware(['is_admin'])->group(function () {
         Route::post('create', [BundleController::class, 'create'])->name('create');
     });
 
+    Route::prefix('item')->name('item.')->group(function () {
+        Route::get('create', [ItemController::class, 'createForm']);
+        Route::post('create', [ItemController::class, 'create'])->name('create');
+    });
 
 });
 
