@@ -40,7 +40,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">` + data[i].name + `</h5>
                                 <p class="card-text"> Rp` + data[i].price + `</p>
-                                <a href="#" class="btn btn-primary">Lihat Barang</a>
+                                <a href="#" class="btn btn-primary stretched-link">Lihat Barang</a>
                             </div>
                         </div>
                     </div>

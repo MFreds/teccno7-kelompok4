@@ -1,7 +1,7 @@
 
 .card-images {
     max-width:286px;
-    max-height:160px;
+    height:160px !important;
     width:auto;
     height:auto;
 }
