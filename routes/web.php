@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ShowcaseController;
 use App\Http\Controllers\BundleController;
@@ -51,6 +52,11 @@ Route::middleware(['is_admin'])->group(function () {
         Route::post('create', [ItemController::class, 'create'])->name('create');
     });
 
+});
+
+// bundle
+Route::prefix('catalog')->name('catalog.')->group(function () {
+    Route::get('/',  [CatalogController::class, 'getCatalogList'])->name('list');
 });
 
 // bundle

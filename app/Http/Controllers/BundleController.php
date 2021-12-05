@@ -58,7 +58,8 @@ class BundleController extends Controller
                 'description' => $request->description,
                 'price' =>  $request->price,
                 'status' => 'open',
-                'stock' => $request->stock
+                'stock' => $request->stock,
+                'tags' => ''
             ]);
 
             $newBundleId = $newBundle->id;

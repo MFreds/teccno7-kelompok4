@@ -5,3 +5,7 @@
     width:auto;
     height:auto;
 }
+
+.progress {
+    height: 10px;
+}
