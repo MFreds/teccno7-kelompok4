@@ -9,3 +9,21 @@
 .progress {
     height: 10px;
 }
+
+.catalog-banner {
+    background-color: #325D79;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.catalog-head {
+    text-align: center;
+    padding: 25px 0px 20px 0px;
+}
+
+.catalog-banner:hover{
+    cursor: pointer;
+    background-color: #475C7A;
+    color: #fff;
+    transition: background-color 100ms linear;
+}
