@@ -42,18 +42,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Product') }}</a>
-                        </li>
 
                         <li class="nav-item dropdown">
                             <a id="dropdownService" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ __('Service') }}
+                                {{ __('Hampers') }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownService">
 
                                 <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                    {{ __('Home admin') }}
+                                    {{ __('Katalog') }}
+                                </a>
+                                <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                    {{ __('Custom') }}
+                                </a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a id="dropdownService" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ __('Cetak 3D') }}
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownService">
+
+                                <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                    {{ __('Cetak Model 3D') }}
                                 </a>
 
                             </div>
