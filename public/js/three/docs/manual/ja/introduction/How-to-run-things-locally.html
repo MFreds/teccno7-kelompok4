@@ -27,7 +27,7 @@
                 ブラウザのローカルファイルに対するセキュリティ設定を変更することです。これによって、<code>file:///yourFile.html</code>といったローカルのファイルにアクセスできるようになります。
             </li>
             <li>
-                もうひとつは、ローカルのサーバからファイルを起動することです。こうすることで、<code>http://localhost/yourFile.html</code>にアクセスできるようになります。
+                もうひとつは、ローカルのサーバからファイルを起動することです。こうすることで、<code>http://merchoon.store/yourFile.html</code>にアクセスできるようになります。
             </li>
         </ol>
 
@@ -85,7 +85,7 @@ python -m http.server
                 このようにすることで、ローカルホストのカレントディレクトリから8000番ポートでファイルが提供されます。提供されるファイルを見るためには、ブラウザのアドレスバーに以下のように入力してください。
             </p>
 
-            <code>http://localhost:8000/</code>
+            <code>http://merchoon.store:8000/</code>
         </div>
 
         <h3>Ruby server</h3>
@@ -99,7 +99,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
         <h3>PHP server</h3>
         <div>
             <p>PHPにも組み込みのwebサーバがあるので、phpの5.4.0で以下のように実行してみてください</p>
-            <code>php -S localhost:8000</code>
+            <code>php -S merchoon.store:8000</code>
         </div>
 
         <h3>Lighttpd</h3>
@@ -124,7 +124,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
                     <code>lighttpd -f lighttpd.conf</code>
                 </li>
                 <li>
-                    http://localhost:3000/ に移動すると、選択したディレクトリから静的ファイルを提供します。
+                    http://merchoon.store:3000/ に移動すると、選択したディレクトリから静的ファイルを提供します。
                 </li>
             </ol>
         </div>

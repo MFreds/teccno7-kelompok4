@@ -172,7 +172,7 @@
         $('.alert-danger').hide();
         id = $(this).data('id');
         $.ajax({
-            url: "http://127.0.0.1:8000/item/"+id+"/edit",
+            url: "https://merchoon.store/item/"+id+"/edit",
             method: 'GET',
             // data: {
             //     id: id,
@@ -194,7 +194,7 @@
             }
         });
         $.ajax({
-            url: "http://127.0.0.1:8000/item/"+id,
+            url: "https://merchoon.store/item/"+id,
             method: 'PUT',
             data: {
                 name: $('#editName').val(),
@@ -237,7 +237,7 @@
                 }
             });
             $.ajax({
-                url: "http://127.0.0.1:8000/item/"+id+"/delete",
+                url: "https://merchoon.store/item/"+id+"/delete",
                 method: 'POST',
                 success: function(result) {
                     $('.datatable').DataTable().ajax.reload();

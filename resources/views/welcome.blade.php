@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <img src="http://127.0.0.1:8000/banner.png" alt="">
+        <img src="https://merchoon.store/banner.png" alt="">
         <div class="col-md-8">
 
             {{-- <h1>(banner) Selamat datang di merchoon</h1> --}}
@@ -65,7 +65,7 @@
         setupPromoHampers()
 
         $('.catalog-banner').on('click', () => {
-            window.location.href = "http://127.0.0.1:8000/catalog"
+            window.location.href = "https://merchoon.store/catalog"
         })
     });
 
@@ -89,7 +89,7 @@
                         <div class="card rounded shadow-sm border-0">
                             <div class="card-body p-4"><img src="` + data[i].photo + `"
                                     alt="" class="img-fluid d-block mx-auto mb-3">
-                                <h5> <a href="http://127.0.0.1:8000` + data[i].fixed_link + `" class="text-dark stretched-link">` + data[i].name + `</a></h5>
+                                <h5> <a href="https://merchoon.store` + data[i].fixed_link + `" class="text-dark stretched-link">` + data[i].name + `</a></h5>
                                 <p class="small text-muted font-italic">` + data[i].description + `
                                 </p>
                             </div>
@@ -121,7 +121,7 @@
                         <div class="card rounded shadow-sm border-0">
                             <div class="card-body p-4"><img src="` + data[i].photo + `"
                                     alt="" class="img-fluid d-block mx-auto mb-3">
-                                <h5> <a href="http://127.0.0.1:8000/bundle/details/` + data[i].uuid + `" class="text-dark stretched-link">` + data[i].name + `</a></h5>
+                                <h5> <a href="https://merchoon.store/bundle/details/` + data[i].uuid + `" class="text-dark stretched-link">` + data[i].name + `</a></h5>
                                 <p class="small text-muted font-italic">` + data[i].description + `
                                 </p>
                             </div>

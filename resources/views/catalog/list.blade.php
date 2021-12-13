@@ -15,7 +15,7 @@
             <div class="card rounded shadow-sm border-0">
                 <div class="card-body p-4"><img src="{{$bundle->photo}}"
                         alt="" class="img-fluid d-block mx-auto mb-3">
-                    <h5> <a href="http://127.0.0.1:8000/bundle/details/{{$bundle->uuid}}" class="text-dark stretched-link">{{$bundle->name}}</a></h5>
+                    <h5> <a href="https://merchoon.store/bundle/details/{{$bundle->uuid}}" class="text-dark stretched-link">{{$bundle->name}}</a></h5>
                     <p class="small text-muted font-italic">{{$bundle->description}}
                     </p>
                 </div>
@@ -36,7 +36,7 @@
             <div class="card rounded shadow-sm border-0">
                 <div class="card-body p-4"><img src="{{$bundle->photo}}"
                         alt="" class="img-fluid d-block mx-auto mb-3">
-                    <h5> <a href="http://127.0.0.1:8000/bundle/details/{{$bundle->uuid}}" class="text-dark stretched-link">{{$bundle->name}}</a></h5>
+                    <h5> <a href="https://merchoon.store/bundle/details/{{$bundle->uuid}}" class="text-dark stretched-link">{{$bundle->name}}</a></h5>
                     <p class="small text-muted font-italic">{{$bundle->description}}
                     </p>
                 </div>

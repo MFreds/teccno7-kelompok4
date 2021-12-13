@@ -135,7 +135,7 @@
         added.push(data)
 
 
-        var _url = `http://127.0.0.1:8000/api/app/item/getSingleItem/` + data
+        var _url = `https://merchoon.store/api/app/item/getSingleItem/` + data
 
         $.ajaxSetup({
             headers: {

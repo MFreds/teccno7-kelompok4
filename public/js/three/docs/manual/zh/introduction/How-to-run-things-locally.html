@@ -27,7 +27,7 @@
                     在浏览器中改变本地文件的安全策略，这将使你可以通过<code>file:///yourFile.html</code>来直接运行本地文件系统中的文件。
 				</li>
 				<li>
-                    从本地的服务器运行文件，这可以让你通过<code>http://localhost/yourFile.html</code>来访问运行在本地服务器上的文件。
+                    从本地的服务器运行文件，这可以让你通过<code>http://merchoon.store/yourFile.html</code>来访问运行在本地服务器上的文件。
 				</li>
 			</ol>
 
@@ -86,7 +86,7 @@ python -m http.server
 
 				<p>这将会在为当前目录在8000端口创建一个服务器，也就是说你可以在地址栏里输入这个地址来访问已经创建好的服务器：</p>
 
-				<code>http://localhost:8000/</code>
+				<code>http://merchoon.store:8000/</code>
 			</div>
 
 			<h3>Ruby server</h3>
@@ -100,7 +100,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
 			<h3>PHP server</h3>
 			<div>
 				<p>PHP自从5.4.0版本开始，就内置了一个Web服务器：</p>
-				<code>php -S localhost:8000</code>
+				<code>php -S merchoon.store:8000</code>
 			</div>
 
 			<h3>Lighttpd</h3>
@@ -127,7 +127,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
 						<code>lighttpd -f lighttpd.conf</code>
 					</li>
 					<li>
-						使用浏览器打开http://localhost:3000/，然后服务器将可以从你所选择的目录中向你提供静态文件。
+						使用浏览器打开http://merchoon.store:3000/，然后服务器将可以从你所选择的目录中向你提供静态文件。
 					</li>
 				</ol>
 			</div>

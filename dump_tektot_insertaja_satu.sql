@@ -15,21 +15,21 @@
 -- Dumping data for table tekno.bundles: ~2 rows (approximately)
 /*!40000 ALTER TABLE `bundles` DISABLE KEYS */;
 INSERT INTO `bundles` (`id`, `uuid`, `name`, `photo`, `description`, `price`, `stock`, `status`, `created_at`, `updated_at`, `tags`) VALUES
-	(10, '1510aadf-1dca-4498-9699-9e6815f38b26', 'Hampers Snack Ulang Tahun', 'http://127.0.0.1:8000/storage/bundle_photos/bundle-31510aadf-1dca-4498-9699-9e6815f38b26.jpg', 'Hampers paling cocok untuk kerabat anda yang sedang berulang tahun!', 70000, 10, 'open', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 'promo'),
-	(11, 'ca690329-51e1-4e06-941e-95a9ac8dc24e', 'Hampers #1 Limited', 'http://127.0.0.1:8000/storage/bundle_photos/bundle-3ca690329-51e1-4e06-941e-95a9ac8dc24e.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in vulputate libero, sed porttitor quam. Maecenas at erat eget diam dictum sodales in vitae arcu.', 50000, 3, 'open', '2021-12-05 07:07:14', '2021-12-05 07:07:14', '');
+	(10, '1510aadf-1dca-4498-9699-9e6815f38b26', 'Hampers Snack Ulang Tahun', 'https://merchoon.store/storage/bundle_photos/bundle-31510aadf-1dca-4498-9699-9e6815f38b26.jpg', 'Hampers paling cocok untuk kerabat anda yang sedang berulang tahun!', 70000, 10, 'open', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 'promo'),
+	(11, 'ca690329-51e1-4e06-941e-95a9ac8dc24e', 'Hampers #1 Limited', 'https://merchoon.store/storage/bundle_photos/bundle-3ca690329-51e1-4e06-941e-95a9ac8dc24e.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in vulputate libero, sed porttitor quam. Maecenas at erat eget diam dictum sodales in vitae arcu.', 50000, 3, 'open', '2021-12-05 07:07:14', '2021-12-05 07:07:14', '');
 /*!40000 ALTER TABLE `bundles` ENABLE KEYS */;
 
 -- Dumping data for table tekno.bundle_items: ~8 rows (approximately)
 /*!40000 ALTER TABLE `bundle_items` DISABLE KEYS */;
 INSERT INTO `bundle_items` (`id`, `name`, `photo`, `description`, `created_at`, `updated_at`, `bundle_id`) VALUES
-	(10, 'Coklat Silverqueen', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3fa26e27b-f139-4de4-9b59-d735fa318a3d.jpg', 'Coklat silverqueen med size (x2)', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
-	(11, 'Gantungan Kunci Custom', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-342606f78-cb60-4931-b08a-a925f4cc8ebb.jpg', 'Gantungan Kunci Cutom dengan inisial custom', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
-	(12, 'Susu Coklat', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-340979514-fef1-471f-a8fb-5f91f1192bb8.jpg', 'Susu coklat UHT 250mg (x2)', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
-	(13, 'Ciki Ciki', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3d0103b13-02ec-4b05-88a8-d6de24056e96.jpg', 'Ciki Coklat Rasa Coklat', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
-	(14, 'item pertama', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3bc3a3ab9-c310-40f2-8fc2-7f6d8b0fece1.jpg', 'Deskripsi item hampers pertama', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
-	(15, 'item kedua', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3d50e9703-485b-4567-906c-f6dd7fcac92e.jpg', 'Deskripsi item kedua', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
-	(16, 'item ketiga', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3c7f3337d-a4dd-47e6-8311-c6f645369b43.jpg', 'Deskripsi item ketiga', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
-	(17, 'item keempat', 'http://127.0.0.1:8000/storage/bundle_item_photos/bundle-item-3db7ffbd1-48a2-4340-a675-ad5c4574a69a.jpg', 'Deskripsi item ketiga', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11);
+	(10, 'Coklat Silverqueen', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3fa26e27b-f139-4de4-9b59-d735fa318a3d.jpg', 'Coklat silverqueen med size (x2)', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
+	(11, 'Gantungan Kunci Custom', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-342606f78-cb60-4931-b08a-a925f4cc8ebb.jpg', 'Gantungan Kunci Cutom dengan inisial custom', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
+	(12, 'Susu Coklat', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-340979514-fef1-471f-a8fb-5f91f1192bb8.jpg', 'Susu coklat UHT 250mg (x2)', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
+	(13, 'Ciki Ciki', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3d0103b13-02ec-4b05-88a8-d6de24056e96.jpg', 'Ciki Coklat Rasa Coklat', '2021-12-05 07:04:19', '2021-12-05 07:04:19', 10),
+	(14, 'item pertama', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3bc3a3ab9-c310-40f2-8fc2-7f6d8b0fece1.jpg', 'Deskripsi item hampers pertama', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
+	(15, 'item kedua', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3d50e9703-485b-4567-906c-f6dd7fcac92e.jpg', 'Deskripsi item kedua', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
+	(16, 'item ketiga', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3c7f3337d-a4dd-47e6-8311-c6f645369b43.jpg', 'Deskripsi item ketiga', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11),
+	(17, 'item keempat', 'https://merchoon.store/storage/bundle_item_photos/bundle-item-3db7ffbd1-48a2-4340-a675-ad5c4574a69a.jpg', 'Deskripsi item ketiga', '2021-12-05 07:07:14', '2021-12-05 07:07:14', 11);
 /*!40000 ALTER TABLE `bundle_items` ENABLE KEYS */;
 
 -- Dumping data for table tekno.carts: ~1 rows (approximately)
@@ -45,11 +45,11 @@ INSERT INTO `carts` (`id`, `user_id`, `item_type`, `item_id`, `price`, `total_pr
 -- Dumping data for table tekno.items: ~5 rows (approximately)
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
 INSERT INTO `items` (`id`, `uuid`, `name`, `photo`, `description`, `stock`, `price`, `tags`, `status`, `created_at`, `updated_at`) VALUES
-	(1, '56e23b9e-cd77-4330-a587-e014448ba2f6', 'item baru satu edited', 'http://127.0.0.1:8000/storage/item_photos/item-356e23b9e-cd77-4330-a587-e014448ba2f6.PNG', 'deskripsi item satu edited', 251, 10000, NULL, 'open', '2021-11-02 09:01:15', '2021-11-02 15:01:47'),
-	(8, '4786448f-125f-4c19-8be5-a65d19907670', 'Gantungan Kunci', 'http://127.0.0.1:8000/storage/item_photos/item-34786448f-125f-4c19-8be5-a65d19907670.jpg', 'Gantungan Kunci Print Custom', 20, 25000, NULL, 'open', '2021-12-05 15:10:46', '2021-12-05 15:10:46'),
-	(9, 'a445724d-eb3c-4da4-a966-f4e57b6cbbdc', 'Keycaps Custom (1u)', 'http://127.0.0.1:8000/storage/item_photos/item-3a445724d-eb3c-4da4-a966-f4e57b6cbbdc.jpg', 'Keycapscetak custom ukuran 1u', 16, 20000, NULL, 'open', '2021-12-05 15:12:14', '2021-12-05 15:12:14'),
-	(10, '5738d069-22f8-44a5-a562-f70adeabbf96', 'Keycaps Custom (1.25u)', 'http://127.0.0.1:8000/storage/item_photos/item-35738d069-22f8-44a5-a562-f70adeabbf96.jpg', 'Keycapscetak custom ukuran 1.25u', 20, 20000, NULL, 'open', '2021-12-05 15:12:40', '2021-12-05 15:12:40'),
-	(11, '33ba8f13-2066-449a-a151-19fd92fadf6d', 'Keycaps Custom (1.5u)', 'http://127.0.0.1:8000/storage/item_photos/item-333ba8f13-2066-449a-a151-19fd92fadf6d.jpg', 'Keycapscetak custom ukuran 1.5u', 20, 25000, NULL, 'open', '2021-12-05 15:13:18', '2021-12-05 15:13:18');
+	(1, '56e23b9e-cd77-4330-a587-e014448ba2f6', 'item baru satu edited', 'https://merchoon.store/storage/item_photos/item-356e23b9e-cd77-4330-a587-e014448ba2f6.PNG', 'deskripsi item satu edited', 251, 10000, NULL, 'open', '2021-11-02 09:01:15', '2021-11-02 15:01:47'),
+	(8, '4786448f-125f-4c19-8be5-a65d19907670', 'Gantungan Kunci', 'https://merchoon.store/storage/item_photos/item-34786448f-125f-4c19-8be5-a65d19907670.jpg', 'Gantungan Kunci Print Custom', 20, 25000, NULL, 'open', '2021-12-05 15:10:46', '2021-12-05 15:10:46'),
+	(9, 'a445724d-eb3c-4da4-a966-f4e57b6cbbdc', 'Keycaps Custom (1u)', 'https://merchoon.store/storage/item_photos/item-3a445724d-eb3c-4da4-a966-f4e57b6cbbdc.jpg', 'Keycapscetak custom ukuran 1u', 16, 20000, NULL, 'open', '2021-12-05 15:12:14', '2021-12-05 15:12:14'),
+	(10, '5738d069-22f8-44a5-a562-f70adeabbf96', 'Keycaps Custom (1.25u)', 'https://merchoon.store/storage/item_photos/item-35738d069-22f8-44a5-a562-f70adeabbf96.jpg', 'Keycapscetak custom ukuran 1.25u', 20, 20000, NULL, 'open', '2021-12-05 15:12:40', '2021-12-05 15:12:40'),
+	(11, '33ba8f13-2066-449a-a151-19fd92fadf6d', 'Keycaps Custom (1.5u)', 'https://merchoon.store/storage/item_photos/item-333ba8f13-2066-449a-a151-19fd92fadf6d.jpg', 'Keycapscetak custom ukuran 1.5u', 20, 25000, NULL, 'open', '2021-12-05 15:13:18', '2021-12-05 15:13:18');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 
 -- Dumping data for table tekno.migrations: ~13 rows (approximately)
@@ -85,8 +85,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- Dumping data for table tekno.services: ~2 rows (approximately)
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
 INSERT INTO `services` (`id`, `uuid`, `name`, `photo`, `description`, `price`, `max_revision`, `status`, `created_at`, `updated_at`, `fixed_link`) VALUES
-	(3, 'fd490192-92cb-4768-bf40-0e76b3dae1ee', 'Jasa Print 3D', 'http://127.0.0.1:8000/storage/product_photos/3fd490192-92cb-4768-bf40-0e76b3dae1ee.jpg', 'Jasa print model 3D', 500, 1, 'open', '2021-12-05 08:50:00', '2021-12-05 08:50:00', '/print'),
-	(4, '3ebebaec-8c69-44ea-8078-3d2840b3321e', 'Buat Hampers Custom!', 'http://127.0.0.1:8000/storage/product_photos/33ebebaec-8c69-44ea-8078-3d2840b3321e.jpg', 'Buat hampers dengan isi sesukamu!', 100, 1, 'open', '2021-12-05 08:51:14', '2021-12-05 08:51:14', '/bundle/custom');
+	(3, 'fd490192-92cb-4768-bf40-0e76b3dae1ee', 'Jasa Print 3D', 'https://merchoon.store/storage/product_photos/3fd490192-92cb-4768-bf40-0e76b3dae1ee.jpg', 'Jasa print model 3D', 500, 1, 'open', '2021-12-05 08:50:00', '2021-12-05 08:50:00', '/print'),
+	(4, '3ebebaec-8c69-44ea-8078-3d2840b3321e', 'Buat Hampers Custom!', 'https://merchoon.store/storage/product_photos/33ebebaec-8c69-44ea-8078-3d2840b3321e.jpg', 'Buat hampers dengan isi sesukamu!', 100, 1, 'open', '2021-12-05 08:51:14', '2021-12-05 08:51:14', '/bundle/custom');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 
 -- Dumping data for table tekno.users: ~4 rows (approximately)

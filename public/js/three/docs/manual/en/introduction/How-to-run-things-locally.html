@@ -28,7 +28,7 @@
 					Change security for local files in a browser. This allows you to access your page as: <code>file:///yourFile.html</code>
 				</li>
 				<li>
-					Run files from a local web server. This allows you to access your page as: <code>http://localhost/yourFile.html</code>
+					Run files from a local web server. This allows you to access your page as: <code>http://merchoon.store/yourFile.html</code>
 				</li>
 			</ol>
 
@@ -106,9 +106,9 @@ python -m SimpleHTTPServer
 python -m http.server
 				</code>
 
-				<p>This will serve files from the current directory at localhost under port 8000, i.e in the address bar type:</p>
+				<p>This will serve files from the current directory at merchoon.store under port 8000, i.e in the address bar type:</p>
 
-				<code>http://localhost:8000/</code>
+				<code>http://merchoon.store:8000/</code>
 			</div>
 
 			<h3>Ruby server</h3>
@@ -122,7 +122,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
 			<h3>PHP server</h3>
 			<div>
 				<p>PHP also has a built-in web server, starting with php 5.4.0:</p>
-				<code>php -S localhost:8000</code>
+				<code>php -S merchoon.store:8000</code>
 			</div>
 
 			<h3>Lighttpd</h3>
@@ -150,7 +150,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
 						<code>lighttpd -f lighttpd.conf</code>
 					</li>
 					<li>
-						Navigate to http://localhost:3000/ and it will serve static files from the directory you
+						Navigate to http://merchoon.store:3000/ and it will serve static files from the directory you
 						chose.
 					</li>
 				</ol>

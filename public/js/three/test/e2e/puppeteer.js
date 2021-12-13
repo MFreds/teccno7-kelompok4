@@ -94,7 +94,7 @@ const pup = puppeteer.launch( {
 	page.on( 'console', msg => ( msg.text().slice( 0, 8 ) === 'Warning.' ) ? console.null( msg.text() ) : {} );
 	page.on( 'request', async ( request ) => {
 
-		if ( request.url() === 'http://localhost:1234/build/three.module.js' ) {
+		if ( request.url() === 'http://merchoon.store:1234/build/three.module.js' ) {
 
 			await request.respond( {
 				status: 200,
@@ -162,7 +162,7 @@ const pup = puppeteer.launch( {
 
 			try {
 
-				await page.goto( `http://localhost:${ port }/examples/${ file }.html`, {
+				await page.goto( `http://merchoon.store:${ port }/examples/${ file }.html`, {
 					waitUntil: 'networkidle2',
 					timeout: networkTimeout * attemptProgress
 				} );

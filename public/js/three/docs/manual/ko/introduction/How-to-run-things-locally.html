@@ -29,7 +29,7 @@
                 브라우저에서 로컬 파일의 보안설정을 변경합니다. 이를 통해<code>file:///yourFile.html</code>로 들어가 확인할 수 있을 것입니다.
             </li>
             <li>
-                파일을 로컬 웹 서버에서 돌리는 방법입니다. <code>http://localhost/yourFile.html</code>로 들어가 확인할 수 있을 것입니다.
+                파일을 로컬 웹 서버에서 돌리는 방법입니다. <code>http://merchoon.store/yourFile.html</code>로 들어가 확인할 수 있을 것입니다.
             </li>
         </ol>
 
@@ -86,10 +86,10 @@ python -m SimpleHTTPServer
 python -m http.server
 				</code>
 
-            <p>이 코드는 현재 디렉토리의 파일들을 localhost 8000번 포트로 내보내 줄 것입니다. 주소 예시는 다음과 같습니다.
+            <p>이 코드는 현재 디렉토리의 파일들을 merchoon.store 8000번 포트로 내보내 줄 것입니다. 주소 예시는 다음과 같습니다.
                 </p>
 
-            <code>http://localhost:8000/</code>
+            <code>http://merchoon.store:8000/</code>
         </div>
 
         <h3>Ruby 서버</h3>
@@ -103,7 +103,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
         <h3>PHP 서버</h3>
         <div>
             <p>PHP도 내장된 웹서버가 있어, php 5.4.0부터 다음과 같이 활용 가능합니다:</p>
-            <code>php -S localhost:8000</code>
+            <code>php -S merchoon.store:8000</code>
         </div>
 
         <h3>Lighttpd</h3>
@@ -130,7 +130,7 @@ ruby -r webrick -e "s = WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => 
                     <code>lighttpd -f lighttpd.conf</code>
                 </li>
                 <li>
-                    http://localhost:3000/ 로 들어가면 선택한 디렉토리의 파일들을 보여줄 것입니다.
+                    http://merchoon.store:3000/ 로 들어가면 선택한 디렉토리의 파일들을 보여줄 것입니다.
                 </li>
             </ol>
         </div>
