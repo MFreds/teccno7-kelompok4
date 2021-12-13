@@ -25,6 +25,11 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
 <link href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+{{-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css"> --}}
+
+{{-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css"> --}}
+{{-- <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css"> --}}
 
 @endsection
 
@@ -46,6 +51,53 @@
         </div>
     </div>
 </div>
+<div class="container mt-5 p-3">
+
+    <div class="row">
+        <div class="col-xl-6 col-md-12">
+            <div class="card overflow-hidden">
+                <div class="card-content">
+                    <div class="card-body cleartfix">
+                        <div class="media align-items-stretch">
+                            <div class="align-self-center">
+                                <i class="icon-basket primary font-large-2 mr-2"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4>All sales</h4>
+                                <span>Purchases by customers</span>
+                            </div>
+                            <div class="align-self-center">
+                                <h1 id="all-sales"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6 col-md-12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-body cleartfix">
+                        <div class="media align-items-stretch">
+                            <div class="align-self-center">
+                                <i class="icon-handbag warning font-large-2 mr-2"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4>Total income</h4>
+                                <span>Sum of income from sales</span>
+                            </div>
+                            <div class="align-self-center">
+                                <h1 id="income"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-5 card p-3">
     <canvas id="myChart" width="400" height="200"></canvas>
 </div>
@@ -122,7 +174,14 @@
         method: 'post',
         success: function (result) {
 
-            const data = result.graph
+            var data = result.summary
+
+            $('#all-sales').text(data[0].count)
+            $('#income').text(data[0].sum)
+
+            console.log(data)
+
+            data = result.graph
 
             var _labels = []
             var _sum = []
