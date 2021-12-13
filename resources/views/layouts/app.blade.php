@@ -22,10 +22,16 @@
     <link href="{{ asset('css/card-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
 
+
+
     {{-- ajax jquery --}}
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    {{-- addition for select2 js --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     @yield('styles')
 
@@ -49,7 +55,7 @@
                     <ul class="navbar-nav mr-auto">
 
                         <li class="nav-item dropdown">
-                            <a id="dropdownService" class="nav-link dropdown-toggle" href="#" role="button"
+                            <a id="dropdownService" class="nav-link dropdown-toggle" href="/#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ __('Hampers') }}
                             </a>
@@ -96,6 +102,9 @@
                         </li>
                         @endif
                         @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cart.show') }}">{{ __('Cart') }}</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -139,7 +148,7 @@
             </button>
         </div> --}}
 
-        <main class="py-4">
+        <main class="py-4" style="min-height: 80vh;">
             @yield('content')
         </main>
 
@@ -171,19 +180,6 @@
                             <li><a href="#">FAQ</a></li>
                         </ul>
                     </div>
-                    {{-- <div class="col-lg-4 col-md-6">
-                        <h5 class="text-white mb-3">Newsletter</h5>
-                        <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt.</p>
-                        <form action="#">
-                            <div class="input-group mb-3">
-                                <input class="form-control" type="text" placeholder="Recipient's username"
-                                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <button class="btn btn-primary" id="button-addon2" type="button"><i
-                                        class="fas fa-paper-plane"></i></button>
-                            </div>
-                        </form>
-                    </div> --}}
                 </div>
             </div>
         </footer>

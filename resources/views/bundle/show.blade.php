@@ -94,7 +94,7 @@
                             <span class="helper"></span>
                             <img class="center-image" src="{{ $item->photo }}" alt="" style="max-width: 100%">
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-5 pt-3">
                             <h4>{{ $item->name }}</h4>
                             <p>{{ $item->description }}</p>
                         </div>
@@ -128,43 +128,50 @@
                 </tbody>
                 </table>
                 <div>
-                    <form action="">
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <h4>Beli bundle</h4>
+                    @if (Auth::user() == null)
+                        <div>
+                            Sebelum beli, login dulu!
                         </div>
-                        <div class="col-md-4">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
-                                </div>
-                                <input value="1" name="buy_amount" id="buy_amount_input" type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-add">+</button>
+                    @else
+                    <form action="">
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Beli bundle</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
+                                    </div>
+                                    <input value="1" name="buy_amount" id="buy_amount_input" type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-add">+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6">
-                            <h4>Total Harga</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h4>Total Harga</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="bigger-font">Rp </span><span class="bigger-font" id="total_price_label">1000000</span>
+                                <input id="total_price_input" name="total_price_input" type="text" value="100000" hidden>
+                                <input type="text" name="bundle_id" id="bundle_id_input" value="{{$bundle->id}}" hidden>
+                                <input type="text" name="item_type" id="item_type_input" value="bundle" hidden>
+                                <input id="user_id_input" name="user_id" type="text" value="{{ Auth::user()->id }}" hidden>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <span class="bigger-font">Rp </span><span class="bigger-font" id="total_price_label">1000000</span>
-                            <input id="total_price_input" name="total_price_input" type="text" value="100000" hidden>
-                            <input type="text" name="bundle_id" id="bundle_id_input" value="{{$bundle->id}}" hidden>
-                            <input type="text" name="item_type" id="item_type_input" value="bundle" hidden>
-                            <input id="user_id_input" name="user_id" type="text" value="{{ Auth::user()->id }}" hidden>
+                        <div class="row mt-3">
+                            <label class="ml-4" for="additional_note_input">Note tambahan</label>
+                            <textarea name="additional_note" id="additional_note_input" cols="50" rows="5"></textarea>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <label class="ml-4" for="additional_note_input">Note tambahan</label>
-                        <textarea name="additional_note" id="additional_note_input" cols="50" rows="5"></textarea>
-                    </div>
-                    <button id="submitBeliBtn" type="submit" class="btn btn-primary btn-block mt-4">
-                        Beli
-                    </button>
+                        <button id="submitBeliBtn" type="submit" class="btn btn-primary btn-block mt-4">
+                            Beli
+                        </button>
                     </form>
+                    @endif
+
                 </div>
         </div>
     </div>

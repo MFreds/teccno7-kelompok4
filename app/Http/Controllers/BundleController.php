@@ -136,4 +136,8 @@ class BundleController extends Controller
                 ->make(true);
         }
     }
+
+    public function customForm() {
+        return view('bundle.custom');
+    }
 }

@@ -25,6 +25,11 @@ Route::prefix('app/product')->name('api.product.')->group(function () {
     Route::post('/getAllPromoHampers', [api\bundleApiController::class, 'getPromoBundles'])->name('getPromoBundles');
 });
 
+Route::prefix('app/item')->name('api.item.')->group(function() {
+    Route::post('/getAllItem', [api\itemApiController::class, 'getAllItem'])->name('getAllItem');
+    Route::get('/getSingleItem/{id}', [api\itemApiController::class, 'getSingleItem'])->name('getSingleItem');
+});
+
 Route::prefix('app/cart')->name('api.cart.')->group(function () {
     Route::post('/addItemToCart', [api\cartApiController::class, 'addItemToCart'])->name('addItemToCart');
 });

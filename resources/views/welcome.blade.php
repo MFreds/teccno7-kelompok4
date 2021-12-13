@@ -3,9 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <img src="http://127.0.0.1:8000/banner.png" alt="">
         <div class="col-md-8">
 
-            <h1>(banner) Selamat datang di merchoon</h1>
+            {{-- <h1>(banner) Selamat datang di merchoon</h1> --}}
+
         </div>
     </div>
 

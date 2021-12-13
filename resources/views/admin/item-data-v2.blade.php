@@ -33,7 +33,7 @@
     <div class="d-flex flex-row justify-content-start">
         <div class="px-5 py-2 admin-nav mx-2" >
             <a href="/admin/home"></a>
-            Grafik Penjualan
+            Penjualan
         </div>
         <div class="px-5 py-2 admin-nav mx-2 admin-nav-active">
             <a href="/admin/item/data"></a>

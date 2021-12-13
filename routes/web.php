@@ -8,6 +8,8 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ShowcaseController;
 use App\Http\Controllers\BundleController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +65,9 @@ Route::prefix('catalog')->name('catalog.')->group(function () {
 Route::prefix('bundle')->name('bundle.')->group(function () {
     Route::get('details/{uuid}', [BundleController::class, 'showBundle'])->name('show');
 
+    Route::get('custom', [BundleController::class, 'customForm']);
+    Route::post('custom', [BundleController::class, 'customCreate'])->name('custom.create');
+
     Route::get('list',  [BundleController::class, 'getBundles'])->name('list');
 });
 
@@ -73,6 +78,19 @@ Route::prefix('item')->name('item.')->group(function () {
     Route::get('{id}/edit',  [ItemController::class, 'edit'])->name('editv2');
     Route::put('{id}',  [ItemController::class, 'update'])->name('updatev2');
     Route::post('{id}/delete',  [ItemController::class, 'destroy'])->name('destroyv2');
+});
+
+Route::prefix('cart')->name('cart.')->group(function () {
+    Route::get('/', [CartController::class, 'show'])->name('show');
+    Route::post('cart/add/custom', [CartController::class, 'addCustomBundle'])->name('add.custom');
+});
+
+Route::prefix('order')->name('order.')->group(function () {
+    Route::get('list', [OrderController::class, 'getOrder'])->name('list');
+    Route::post('penjualan', [OrderController::class, 'getPejualanData'])->name('getPejualanData');
+
+    Route::post('new', [OrderController::class, 'newOrder'])->name('new');
+    Route::get('{id}', [OrderController::class, 'show'])->name('show');
 });
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
